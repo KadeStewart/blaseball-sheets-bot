@@ -3,6 +3,7 @@ const readline = require('readline');
 const {google} = require('googleapis');
 const Discord = require('discord.js');
 const client = new Discord.Client();
+const config = require('./config.js')
 const prefix = '!';
 stuff = '';
 
@@ -113,4 +114,4 @@ client.on('message', message => {
 });
 
 // Login HAS to come at the end!
-client.login('NzUwODUzODIxMzY1ODc4ODA1.X1AlHQ.PR6S_QK4NnNmrhDzcRt4Mk78EWk')
+client.login(config.botToken);
